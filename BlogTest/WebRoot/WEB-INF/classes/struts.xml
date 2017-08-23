@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+	<!-- 是否使用struts的开发模式。开发模式会有更多的调试信息。默认值为false(生产环境下使用),开发阶段最好打开  --> 
+    <constant name="struts.devMode" value="true" />
+	
+	<!-- 设置表单提交数据的格式，对get和post都有用 -->
+    <constant name="struts.i18n.encoding" value="gb2312"/>
+	
+	<!-- 指定被struts2处理的请求后缀类型。多个用逗号隔开 -->  
+    <constant name="struts.action.extension" value="action,do,go,xkk"/>
+    
+    
+    <package name="struts2" extends="struts-default">
+    	<action name="registerAction" class="registerAction">
+    		<result name="success">/success.jsp</result>
+    		<!-- 如果数据校验失败，那么会转入到input标签对应的页面 -->
+    		<result name="input">/register.jsp</result>
+    		<result name="error">/error.jsp</result>
+    	</action>
+    	<action name="loginAction" class="loginAction">
+    		<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="input">/login.jsp</result>
+    	</action>
+    	
+    	<action name="editBlogInfoAction" class="editBlogInfoAction">
+			<result name="success" type="redirectAction">user/getBlogInfoAction</result>
+			<result name="error">/error.jsp</result>
+			<result name="input">/user/editbloginfo.jsp</result>
+		</action>
+		
+		<action name="getBlogInfoAction" class="getBlogInfoAction">
+			<result name="success">/user/editbloginfo.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="addArticleAction" class="addArticleAction">
+			<result name="success">/user/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="showUserAllArticleAction" class="showUserAllArticleAction">
+			<result name="success">/user/showUserAllArticle.jsp</result>
+		</action>
+		
+		<action name="showAllArticleAction" class="showAllArticleAction">
+			<result name="success">/showAllArticle.jsp</result>
+		</action>
+		
+		<action name="showArticleAction" class="showArticleAction">
+			<result name="success">/user/showArticle.jsp</result>
+		</action>
+		
+		<action name="addCritiqueAction" class="addCritiqueAction">
+			<result name="success" type="chain">showArticleAction</result>
+		</action>
+		
+		<action name="photoUploadAction" class="photoUploadAction">
+			<result name="success" type="chain">showPhotoAction</result>
+			<result name="input">/user/showphoto.jsp</result>
+			<!-- 配置fileUpload拦截器 -->
+			<interceptor-ref name="fileUpload">
+				<!-- 配置允许上传文件类型 -->
+				<param name="allowedTypes">image/bmp,image/pjpeg,image/gif,image/png,image/jpg,image/jpeg</param>
+				<!-- 配置允许上传文件大小最大值 -->
+				<param name="maximumSize">512000</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		<action name="showPhotoAction" class="showPhotoAction">
+			<result name="success">/user/showphoto.jsp</result>
+		</action>
+    </package>
+
+</struts>
