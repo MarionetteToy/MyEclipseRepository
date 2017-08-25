@@ -55,7 +55,7 @@ window.event.srcElement.className="lt0";
 					<td class="ltsep">|</td>
 					<td class="lt0" onmouseenter="mhEnter()" onmouseleave="mhLeave()"><a href="showPhotoAction.action">œ‡≤·</a></td>
 					<td class="ltsep">|</td>
-					<td class="lt0" onmouseenter="mhEnter()" onmouseleave="mhLeave()"><a href="../index.html">¡Ù—‘∞Â</a></td>
+					<td class="lt0" onmouseenter="mhEnter()" onmouseleave="mhLeave()"><a href="https://github.com/MarionetteToy/MyEclipseRepository">Œ“µƒgithub</a></td>
 				</tr>
 			</table>
 		</td>

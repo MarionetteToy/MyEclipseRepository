@@ -33,10 +33,6 @@ window.event.srcElement.className="lt0";
 					<td class="lt0" onmouseenter="mhEnter()" onmouseleave="mhLeave()"><a href="register.jsp">ÐÂ²©¿Í×¢²á</a></td>
 					<td class="ltsep">|</td>
 					<td class="lt0" onmouseenter="mhEnter()" onmouseleave="mhLeave()"><a href="login.jsp">²©¿ÍµÇÂ½</a></td>
-					<td class="ltsep">|</td>
-					<td class="lt0" onmouseenter="mhEnter()" onmouseleave="mhLeave()"><a href="../index.html">Í¼Æ¬</a></td>
-					<td class="ltsep">|</td>
-					<td class="lt0" onmouseenter="mhEnter()" onmouseleave="mhLeave()"><a href="../index.html">Á´½Ó</a></td>
 				</tr>
 			</table>
 		</td>
