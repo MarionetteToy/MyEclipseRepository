@@ -30,7 +30,7 @@
 										<tr>
 											<td bgcolor="#FFFFFF">
 												<font class="chinesefont105main"> <!-- 文章标题  --> 
-												<a href="user/showArticleAction.action?id=<s:property value='#art.id'/>"><s:property value="#art.title"/></a>
+												<a href="user/showArticleAction.action?username=<s:property value='#art.username'/>&id=<s:property value='#art.id'/>"><s:property value="#art.title"/></a>
 													<hr size='1' noshade color='#CCCCCC'> <br>
 													<div align='right' class='smalltxt' height='32px'>
 														<!-- 发表时间 -->

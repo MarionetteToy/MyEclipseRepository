@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- 配置hibernate设置信息 -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+		
+		<!-- 导入映射文件（实体和表之间的映射关系） -->
+		<mapping resource="com/blog/pojo/UserBean.hbm.xml" />
+		<mapping resource="com/blog/pojo/ArticleBean.hbm.xml"/>
+		<mapping resource="com/blog/pojo/BlogInfoBean.hbm.xml" />
+		<mapping resource="com/blog/pojo/PhotoBean.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

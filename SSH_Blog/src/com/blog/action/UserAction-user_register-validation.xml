@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<!-- 校验用户名 -->
+	<field name="username">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>用户名不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">6</param>
+			<param name="maxLength">20</param>
+			<message>用户长度必须介于${minLength}-${maxLength}之间</message>
+		</field-validator>
+	</field>
+	
+	<!-- 校验密码 -->
+	<field name="password">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>密码不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">6</param>
+			<param name="maxLength">20</param>
+			<message>密码必须介于${minLength}-${maxLength}之间</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[^[A-Za-z0-9]+$]]></param>
+			<message>密码格式不正确，必须是字母和数字的组合</message>
+		</field-validator>
+	</field>
+	<!-- 确认密码 -->
+	<field name="repassword">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>确认密码不能为空</message>
+		</field-validator>
+		<field-validator type="fieldexpression">  
+            <param name="expression">repassword.equals(password)</param>  
+            <message>密码必须一致</message>  
+        </field-validator>
+	</field>
+	<!-- 校验昵称 -->
+	<field name="nickname">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>昵称不能为空</message>
+		</field-validator>
+	</field>
+	<!-- 校验问题 -->
+	<field name="question">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>问题不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">2</param>
+			<param name="maxLength">20</param>
+			<message>问题长度必须介于${minLength}-${maxLength}之间</message>
+		</field-validator>
+	</field>
+	<!-- 校验答案 -->
+	<field name="answer">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>答案不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">2</param>
+			<param name="maxLength">20</param>
+			<message>答案长度必须介于${minLength}-${maxLength}之间</message>
+		</field-validator>
+	</field>
+	
+</validators>

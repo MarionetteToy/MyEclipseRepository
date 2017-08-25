@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 设置表单提交数据的格式，对get和post都有用 -->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.multipart.maxSize" value="104857600"></constant>
+    
+    <package name="blog" extends="struts-default" namespace="/">
+    	
+    	<interceptors>
+    		<interceptor name="userInterceptor" class="com.blog.interceptor.UserInterceptor">
+    			<param name="excludeMethods">login,register,mainPage,quit,registerPage,loginPage,showArticle</param>
+    		</interceptor>
+    		<interceptor-stack name="myDefault">
+    			<interceptor-ref name="userInterceptor" />
+    			<interceptor-ref name="defaultStack" />
+    		</interceptor-stack>
+    	</interceptors>
+    	<default-interceptor-ref name="myDefault" />
+    	
+    	<!-- 编写userAction -->
+    	<action name="user_*" class="userAction" method="{1}">
+    		<!-- 跳转页面result -->
+    		<result name="loginPage" type="dispatcher">/WEB-INF/user/login.jsp</result>
+    		<result name="registerPage" type="dispatcher">/WEB-INF/user/register.jsp</result>
+    		<result name="loginSuccess" type="dispatcher">/WEB-INF/user/success.jsp</result>
+    		<result name="loginFail" type="dispatcher">/WEB-INF/user/error.jsp</result>
+    		<result name="registerSuccess" type="redirectAction">user_loginPage</result>
+    		<result name="registerFail" type="redirectAction">user_registerPage</result>
+    		<result name="input" type="dispatcher">/WEB-INF/user/register.jsp</result>
+    		<result name="quit" type="redirectAction">user_loginPage</result>
+    		<result name="mainPage" type="dispatcher">/WEB-INF/user/showAllArticle.jsp</result>
+    		<result name="editTypePage" type="dispatcher">/WEB-INF/user/editBlogInfo.jsp</result>
+    		<result name="editBlogInfo" type="redirectAction">user_mainPage</result>
+    		<result name="addArticlePage" type="dispatcher">/WEB-INF/user/addArticle.jsp</result>
+    		<result name="showPhotoPage" type="dispatcher">/WEB-INF/user/showPhoto.jsp</result>
+    		<result name="showUserAllArticlePage" type="dispatcher">/WEB-INF/user/showUserAllArticle.jsp</result>
+    		<result name="showArticlePage" type="dispatcher">/WEB-INF/user/showArticle.jsp</result>
+    		
+    	</action>
+    	
+    	<action name="blog_*" class="blogAction" method="{1}">
+    		<result name="editBlogInfo" type="redirectAction">user_mainPage</result>
+    	</action>
+    	
+    	<action name="article_*" class="articleAction" method="{1}">
+    		<result name="addArticle" type="redirectAction">user_mainPage</result>
+    	</action>
+    	
+    	<action name="photo_*" class="photoAction" method="{1}">
+    		<result name="photoUploadSuccess" type="redirectAction">user_showPhotoPage</result>
+    	</action>
+    </package>
+
+</struts>
