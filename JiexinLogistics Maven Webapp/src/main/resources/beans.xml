@@ -33,12 +33,12 @@
 		<property name="acquireIncrement" value="${c3p0.pool.acquireIncrement}"/>
 	</bean>
 	
-	<!-- 4. SessionFactory -->
+	<!-- 4. 配置mybatis的sqlSessionFactory -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
 		<!-- 整合mybatis，包扫描 mapper文件 -->
 		<property name="configLocation" value="classpath:sqlMapConfig.xml"/>
-		<property name="mapperLocations" value="classpath:cn/itcast/jk/mapper/*.xml"/>
+		<property name="mapperLocations" value="classpath:com/yxd/jiexin/mapper/*.xml"/>
 	</bean>
 	
 	<!-- 5. 事务 -->
@@ -46,6 +46,9 @@
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
 	
+	<!-- 注解的事务处理 -->
+	<tx:annotation-driven transaction-manager="txManager"/>
+	<!-- 配置方式的事务处理 -->
 	<tx:advice id="txAdvice" transaction-manager="txManager">
 		<tx:attributes>
 			<tx:method name="insert*" propagation="REQUIRED"/>

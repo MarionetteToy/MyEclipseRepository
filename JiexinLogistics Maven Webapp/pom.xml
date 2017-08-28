@@ -38,7 +38,9 @@
 			<version>1.7.2</version>
 		</dependency>
 
-		<!-- 整合mybatis和mybatis和spring整合包 -->
+		<!-- 整合mybatis和mybatis和spring整合包，两种包必须要匹配 
+				* mybatis-spring
+		-->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
@@ -65,6 +67,7 @@
 		</dependency>
 
 		<!-- 第三方常用jar包 -->
+		<!-- log4j和slf4j的日志jar包 -->
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -91,13 +94,15 @@
 			<artifactId>jfreechart</artifactId>
 			<version>1.0.13</version>
 		</dependency>
+		
+		<!-- 测试包 -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.9</version>
 		</dependency>
 
-
+		<!-- 上传下载的jar包 -->
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
@@ -109,6 +114,7 @@
 			<version>2.0.1</version>
 		</dependency>
 
+		<!-- jstl的jar包 -->
 		<dependency>
 			<groupId>javax.servlet.jsp.jstl</groupId>
 			<artifactId>jstl-api</artifactId>
@@ -127,14 +133,13 @@
 		</dependency>
 
 
-		<!-- 防止和tomcat中的jar冲突 -->
+		<!-- 防止和tomcat中的jar冲突，设置成provided -->
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>6.0.33</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
@@ -147,7 +152,6 @@
 			<version>2.1</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.geronimo.specs</groupId>
 			<artifactId>geronimo-servlet_3.0_spec</artifactId>
