@@ -41,7 +41,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- 新增  oracle jdbc驱动 当这个值为null时，必须告诉它当前字段默认值的类型jdbcType=VARCHAR （mybatis定义）,
 			无效的列类型: 1111; nested exception is java.sql.SQLException
 	 		mysql不用写  -->
-	<insert id="insert" parameterType="cn.itcast.jk.domain.Factory">
+	<insert id="insert" parameterType="com.yxd.jiexin.domain.Factory">
 		insert into factory_c
 		(FACTORY_ID,FULL_NAME,FACTORY_NAME,CONTACTS,PHONE,MOBILE,FAX,CNOTE,INSPECTOR,ORDER_NO,STATE,CREATE_BY,CREATE_DEPT,CREATE_TIME)
 		values
@@ -63,7 +63,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 	
 	<!-- 修改 动态SQL语句 -->
-	<update id="update" parameterType="cn.itcast.jk.domain.Factory">
+	<update id="update" parameterType="com.yxd.jiexin.domain.Factory">
 		update factory_c
 		<set>
 			<if test="fullName != null">FULL_NAME=#{fullName, jdbcType=VARCHAR},</if>

@@ -1,0 +1,20 @@
+1 该项目没有使用到Mybatis中的接口编程，映射文件没有对应的接口，只是在dao层中调用相应的命名空间和语句的id进行操作数据库
+
+2 mybatis-spring1.2.*的所有版本和之前的1.1.*之前的版本在dao层的实现是不一样的
+	@Autowired
+	//mybatis-spring 1.0无需此方法；mybatis-spring1.2必须注入且需要set方法。
+	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory){
+		super.setSqlSessionFactory(sqlSessionFactory);
+	}
+	
+3 BaseDao定义相关的方法，BaseDaoImpl继承了SqlSessionDaoSupport，然后需要注意第二点，并实现了BaseDao接口里的方法（这个和Hibernate相似）
+
+4 BaseDaoImpl里的ns是用来指定相应查询里的命名空间的名字
+
+5 所有其他的Dao层，接口只需要继承BaseDao，接口实现类需要继承BaseDaoImpl和实现对应的接口
+
+------------------------------------------------------------------------------------
+
+6 注解时可以不指定Controller、Service、Repository里面相应的value值，ioc容器会自动注入
+
+7 BaseController是用来进行日期转换的

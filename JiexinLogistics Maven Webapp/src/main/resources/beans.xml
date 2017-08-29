@@ -33,15 +33,16 @@
 		<property name="acquireIncrement" value="${c3p0.pool.acquireIncrement}"/>
 	</bean>
 	
-	<!-- 4. 配置mybatis的sqlSessionFactory -->
+	<!-- 4. 配置mybatis的sqlSessionFactory，不同于Hibernate的LocalSessionFactoryBean -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
-		<!-- 整合mybatis，包扫描 mapper文件 -->
+		<!-- 整合mybatis，包扫描 mapper文件，这两个参数和Hibernate也是一样的 -->
+		<!-- 这里可惜的是没有mybatis相关配置，那你就错了，这里是引用外部的文件，所以需要在外部文件里设置 -->
 		<property name="configLocation" value="classpath:sqlMapConfig.xml"/>
 		<property name="mapperLocations" value="classpath:com/yxd/jiexin/mapper/*.xml"/>
 	</bean>
 	
-	<!-- 5. 事务 -->
+	<!-- 5. 事务配置，这是针对mybatis的事务管理器，用来管理数据源的，所以需要数据源 -->
 	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"/>
 	</bean>

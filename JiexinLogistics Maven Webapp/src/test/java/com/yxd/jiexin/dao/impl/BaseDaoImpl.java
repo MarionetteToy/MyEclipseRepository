@@ -12,8 +12,10 @@ import com.yxd.jiexin.dao.BaseDao;
 import com.yxd.jiexin.pagination.Page;
 
 public abstract class BaseDaoImpl<T> extends SqlSessionDaoSupport implements BaseDao<T>{
+	
+	//mybatis-spring 1.1无需此方法；mybatis-spring1.2必须注入。
+	//可以看看1.1版本里的SqlSessionDaoSupport类，区别在于1.2版本里的setSqlSessionFactory()方法是没有注解的，所以要手动添加，而1.1是有的;
 	@Autowired
-	//mybatis-spring 1.0无需此方法；mybatis-spring1.2必须注入。
 	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory){
 		super.setSqlSessionFactory(sqlSessionFactory);
 	}
