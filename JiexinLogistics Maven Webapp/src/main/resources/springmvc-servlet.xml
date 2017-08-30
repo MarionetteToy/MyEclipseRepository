@@ -19,9 +19,14 @@
 	<mvc:annotation-driven></mvc:annotation-driven>
 	
 	<!-- 1. 包扫描 controller -->
-	<context:component-scan base-package="com.yxd.jiexin.controller"></context:component-scan>
+	<context:component-scan base-package="com.yxd" use-default-filters="false">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+		<context:include-filter type="annotation"
+			expression="org.springframework.web.bind.annotation.ControllerAdvice" />
+	</context:component-scan>
 	
-	<mvc:default-servlet-handler/>
+	<mvc:default-servlet-handler />
 	
 	<!-- 2. 内部资源视图解析器 -->
 	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
