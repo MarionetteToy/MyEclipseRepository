@@ -13,7 +13,7 @@
 .modelTitle {
 	BACKGROUND: url("../images/title/title_bg.gif");
 	background-repeat:repeat-x;
-	FONT: bold 10.5pt å¾®è½¯é›…é»‘, å®‹ä½“;
+	FONT: bold 10.5pt Î¢ÈíÑÅºÚ, ËÎÌå;
 	COLOR: #00554a;
 	border-bottom:1px solid #45b4a7;
 	HEIGHT: 25px;
@@ -23,7 +23,7 @@
 .subModelTitle {
  	PADDING-LEFT: 10pt;
 	BACKGROUND: #f0fcfa; 
-	FONT: bold 9pt å¾®è½¯é›…é»‘, å®‹ä½“;
+	FONT: bold 9pt Î¢ÈíÑÅºÚ, ËÎÌå;
 	COLOR: #369e92; 
 	HEIGHT: 20pt; 
 	TEXT-ALIGN: left;	
