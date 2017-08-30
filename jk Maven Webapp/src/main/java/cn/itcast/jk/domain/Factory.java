@@ -1,11 +1,5 @@
 package cn.itcast.jk.domain;
 
-/**
- * @Description:
- * @Author:	nutony
- * @Company:	http://java.itcast.cn
- * @CreateDate:	2014年10月9日
- */
 public class Factory {
 	
 	private String id;	//将主键都映射成id

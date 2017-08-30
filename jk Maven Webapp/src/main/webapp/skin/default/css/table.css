@@ -8,21 +8,21 @@ tbody, tfoot {
 }
 
 caption {
-	font: 14.7px "ËÎÌå";
+	font: 14.7px "å®‹ä½“";
 	color: #476CA4;	
 }
 
-/* Ä¬ÈÏÏÂÀ­ÁĞ±í¿ò */
+/* é»˜è®¤ä¸‹æ‹‰åˆ—è¡¨æ¡† */
 select {
-    font: 12px "ËÎÌå";
+    font: 12px "å®‹ä½“";
     background: #FFF;
     border: 1px solid #637DDE;
 }
 
-/*Ä¬ÈÏÊı¾İÎÄ±¾¿ò¿ØÖÆ*/
+/*é»˜è®¤æ•°æ®æ–‡æœ¬æ¡†æ§åˆ¶*/
 textarea {
     width:98%;
-    font: 12px "ËÎÌå";
+    font: 12px "å®‹ä½“";
     border: 1px solid #7F9DB9;
     /*
     word-wrap:break-word;
@@ -33,7 +33,7 @@ textarea {
     width: 260px;
 }
 
-/* Í¨ÓÃ±í¸ñ */
+/* é€šç”¨è¡¨æ ¼ */
 .commonTable {
 	width:98%;
 }
@@ -48,12 +48,12 @@ textarea {
 	
 }
 
-/* ±í¸ñÀ¸Ä¿ */
+/* è¡¨æ ¼æ ç›® */
 .columnTitle_mustbe {
 	width: 90px;
 	PADDING: 0px 5px 5px 18px;
 	BACKGROUND:url(../images/must.gif) no-repeat left 15px; 
-	FONT: 9pt ËÎÌå; 
+	FONT: 9pt å®‹ä½“; 
 	COLOR: #00544a; 
 	TEXT-ALIGN: left;
 	border-bottom:1px solid #c1e1dd;
@@ -64,14 +64,14 @@ textarea {
 .columnTitle {
 	width: 90px;
 	PADDING: 0px 5px 5px 18px;
-	FONT: 9pt ËÎÌå; 
+	FONT: 9pt å®‹ä½“; 
 	COLOR: #00544a; 
 	TEXT-ALIGN: left;
 	border-bottom:1px solid #c1e1dd;
 	padding-top:15px;
 	letter-spacing:1.5px;
 }
-/* ±í¸ñÄÚÈİ */
+/* è¡¨æ ¼å†…å®¹ */
 .normalTD {
     text-align:left;
 	word-break:break-all;
@@ -97,7 +97,7 @@ textarea {
 
 .td_title {
     PADDING: 5px 5px 5px 6px;
-	FONT: 9pt ËÎÌå; 
+	FONT: 9pt å®‹ä½“; 
 	COLOR: #00544a; 
 	TEXT-ALIGN: left;
 	border-bottom:1px solid #c1e1dd;
@@ -106,12 +106,12 @@ textarea {
 }
 
 /*
-²¿ÃÅÄ£¿éĞŞ¸ÄÒ³ÃæÊ¹ÓÃ
+éƒ¨é—¨æ¨¡å—ä¿®æ”¹é¡µé¢ä½¿ç”¨
 */
 .td_mustbe {
     PADDING: 5px 5px 5px 6px;
 	BACKGROUND:url(/skin/default/images/must.gif) no-repeat  -9px 14px; 
-	FONT: 9pt ËÎÌå; 
+	FONT: 9pt å®‹ä½“; 
 	COLOR: #00544a; 
 	TEXT-ALIGN: left;
 	border-bottom:1px solid #c1e1dd;
@@ -123,7 +123,7 @@ textarea {
 	width: 80px;
 	PADDING: 5px 5px 5px 22px;
 	BACKGROUND:url(/skin/default/images/must.gif) no-repeat left 32px; 
-	FONT: 9pt ËÎÌå; 
+	FONT: 9pt å®‹ä½“; 
 	COLOR: #00544a; 
 	TEXT-ALIGN: left;
 	border-bottom:1px solid #c1e1dd;
@@ -145,20 +145,20 @@ textarea {
 .tc_others_word{float:left;margin-top:5px;margin-left:3px;color:#009900;}
 
 
-/* Í¨ÓÃ±í¸ñĞĞ¶¨Òå */
+/* é€šç”¨è¡¨æ ¼è¡Œå®šä¹‰ */
 .commonTable tr {
     font-size: 12px;
 }
 
 
-/* Í¨ÓÃ±í¸ñÄÚÈİ */
+/* é€šç”¨è¡¨æ ¼å†…å®¹ */
 
 .tableFooter {
 	height:3px;
 	background: #f5f9fd;
 }
 
-/* Í¨ÓÃ±í¸ñ±êÌâÀ¸ */
+/* é€šç”¨è¡¨æ ¼æ ‡é¢˜æ  */
 .listTablew{
 	margin-top:5px;
 	padding:1px;

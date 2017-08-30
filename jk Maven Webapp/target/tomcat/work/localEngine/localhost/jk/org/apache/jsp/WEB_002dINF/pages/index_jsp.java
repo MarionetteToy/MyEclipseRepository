@@ -85,7 +85,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("/skin/default/css/login.css\" media=\"all\" />\r\n");
       out.write("</head>\r\n");
       out.write("\r\n");
-      out.write("<body>\r\n");
+      out.write("<body class=\"body_css\">\r\n");
       out.write("<form id=\"login_main\" method=\"post\">\r\n");
       out.write("<div id=\"warpbox\">\r\n");
       out.write("\t<div class=\"main\">\r\n");

@@ -15,12 +15,6 @@ import cn.itcast.jk.domain.Factory;
 import cn.itcast.jk.pagination.Page;
 import cn.itcast.jk.service.FactoryService;
 
-/**
- * @Description:
- * @Author:	nutony
- * @Company:	http://java.itcast.cn
- * @CreateDate:	2014年10月9日
- */
 @Service
 public class FactoryServiceImpl implements FactoryService {
 	@Resource
@@ -42,7 +36,7 @@ public class FactoryServiceImpl implements FactoryService {
 	}
 
 	public void insert(Factory factory) {
-		factory.setId(UUID.randomUUID().toString());		//设置UUID
+		//factory.setId(UUID.randomUUID().toString());		//设置UUID
 		factory.setState("1");								//默认启用状态
 		factoryDao.insert(factory);
 	}

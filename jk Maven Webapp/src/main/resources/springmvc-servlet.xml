@@ -25,4 +25,6 @@
 		<property name="suffix" value=""/>
 	</bean>
 	
+	<!-- <mvc:default-servlet-handler/> -->
+	
 </beans>

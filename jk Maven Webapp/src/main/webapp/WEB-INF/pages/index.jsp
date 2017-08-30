@@ -6,7 +6,7 @@
 	<link rel="stylesheet" rev="stylesheet" type="text/css" href="${ctx}/skin/default/css/login.css" media="all" />
 </head>
 
-<body>
+<body class="body_css">
 <form id="login_main" method="post">
 <div id="warpbox">
 	<div class="main">
