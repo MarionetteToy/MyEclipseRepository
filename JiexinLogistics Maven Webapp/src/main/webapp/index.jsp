@@ -4,6 +4,6 @@
 </head>
 <body>
 	<h1>首页</h1>
-	<a href="${pageContext.request.contextPath }/home/home.action">由此去</a>
+	<a href="${pageContext.request.contextPath }/home.action">由此去</a>
 </body>
 </html>
