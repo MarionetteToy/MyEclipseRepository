@@ -4,5 +4,8 @@
 	"http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
+	<mappers>
+		<package name="com.yxd.jiexin.mapper"/>
+	</mappers>
 
 </configuration>
